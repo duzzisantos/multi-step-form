@@ -20,12 +20,11 @@ class Form extends React.Component {
       option1: 0,
       option2: 0,
       option3: 0,
-      select: {
-        germany: 0,
-        sweden: 0,
-        italy: 0,
-        spain: 0,
-      },
+      germany: 0,
+      sweden: 0,
+      italy: 0,
+      spain: 0,
+
       value: 0,
     };
 
@@ -89,17 +88,18 @@ class Form extends React.Component {
   };
 
   // select onchange event listeners
+
   handleGermany = () => {
-    let germany = this.state.select.germany;
+    let germany = this.state.germany;
     germany = germany + 3;
     this.setState({
-      spain: germany,
+      germany: germany,
     });
     console.log(germany);
   };
 
   handleSpain = () => {
-    let spain = this.state.select.spain;
+    let spain = this.state.spain;
     spain = spain + 3;
     this.setState({
       spain: spain,
@@ -108,7 +108,7 @@ class Form extends React.Component {
   };
 
   handleSweden = () => {
-    let sweden = this.state.select.sweden;
+    let sweden = this.state.sweden;
     sweden = sweden + 5;
     this.setState({
       sweden: sweden,
@@ -117,7 +117,7 @@ class Form extends React.Component {
   };
 
   handleItaly = () => {
-    let italy = this.state.select.italy;
+    let italy = this.state.italy;
     italy = italy + 5;
     this.setState({
       italy: italy,
@@ -136,8 +136,7 @@ class Form extends React.Component {
 
   //Pagination Event listeners for the multistep form
 
-  startAgain = (event) => {
-    event.preventDefault();
+  startAgain = () => {
     let currentPage = this.state.currentPage;
     currentPage = currentPage === 6 ? 1 : currentPage + 1;
     this.setState({
@@ -176,7 +175,7 @@ class Form extends React.Component {
     let currentPage = this.state.currentPage;
     if (currentPage === 1) {
       return (
-        <button type="button" className="start-btn" onClick={this.nextPage}>
+        <button type="reset" className="start-btn" onClick={this.nextPage} title="Start survey">
           START THE SURVEY <ArrowCircleRight />
         </button>
       );
@@ -188,7 +187,7 @@ class Form extends React.Component {
     let currentPage = this.state.currentPage;
     if (currentPage >= 2 && currentPage <= 4) {
       return (
-        <button type="button" className="next-btn" onClick={this.nextPage}>
+        <button type="button" className="next-btn" onClick={this.nextPage} title="Next page">
           NEXT <ArrowCircleRight />
         </button>
       );
@@ -200,7 +199,7 @@ class Form extends React.Component {
     let currentPage = this.state.currentPage;
     if (currentPage === 5) {
       return (
-        <button type="button" className="finish-btn" onClick={this.nextPage}>
+        <button type="button" className="finish-btn" onClick={this.nextPage} title="Finish">
           FINISH <ArrowCircleRight />
         </button>
       );
@@ -216,6 +215,7 @@ class Form extends React.Component {
           type="button"
           onClick={this.previousPage}
           className="previous-btn"
+          title="Previous page"
         >
           <ArrowLeft /> BACK
         </button>
@@ -228,7 +228,12 @@ class Form extends React.Component {
     let currentPage = this.state.currentPage;
     if (currentPage === 6) {
       return (
-        <button type="reset" className="restart-btn" onClick={this.startAgain}>
+        <button
+          type="submit"
+          className="restart-btn"
+          onSubmit={this.startAgain}
+          title="Start new survey"
+        >
           START NEW SURVEY
         </button>
       );
@@ -269,11 +274,23 @@ class Form extends React.Component {
           name={this.state.name}
           select={this.state.value}
           handleGermany={this.handleGermany}
+          handleSweden={this.handleSweden}
+          handleItaly={this.handleItaly}
+          handleSpain={this.handleSpain}
         />
         <Score
           currentPage={this.state.currentPage}
           name={this.state.name}
-          // totalValue={this.state.value}
+          often={this.state.often}
+          rarely={this.state.rarely}
+          never={this.state.never}
+          option1={this.state.option1}
+          option2={this.state.option2}
+          option3={this.state.option3}
+          germany={this.state.germany}
+          sweden={this.state.sweden}
+          italy={this.state.italy}
+          spain={this.state.spain}
         />
         {this.startSurvey()}
         {this.nextButton()}

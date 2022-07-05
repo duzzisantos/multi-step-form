@@ -16,6 +16,7 @@ const Second = (props) => {
           name="option1"
           value={props.option1}
           onChange={props.handleOption1}
+          title="Option 1"
         />
         <label htmlFor="Option1">Option1</label>
         <input
@@ -24,6 +25,7 @@ const Second = (props) => {
           name="option2"
           value={props.option2}
           onChange={props.handleOption2}
+          title="Option 2"
         />
         <label htmlFor="option2">Option2</label>
         <input
@@ -32,6 +34,7 @@ const Second = (props) => {
           name="option3"
           value={props.option3}
           onChange={props.handleOption3}
+          title="Option 3"
         />
         <label htmlFor="option3">Option3</label>
       </div>

@@ -10,11 +10,11 @@ const First = (props) => {
       <h6 style={{ paddingTop: "140px" }}>QUESTION 1</h6>
       <h2>How often do you visit this website?</h2>
       <div className="checkboxes">
-        <input type="checkbox" className="often" name="often" value={props.often} onChange={props.handleOften} />
+        <input type="checkbox" className="often" name="often" title="Often" value={props.often} onChange={props.handleOften} />
         <label htmlFor="often">Often</label>
-        <input type="checkbox" className="rarely" name="rarely" value={props.rarely} onChange={props.handleRarely}/>
+        <input type="checkbox" className="rarely" name="rarely" title="Rarely" value={props.rarely} onChange={props.handleRarely}/>
         <label htmlFor="rarely">Rarely</label>
-        <input type="checkbox" className="never" name="never" value={props.never} onchange={props.handleNever}/>
+        <input type="checkbox" className="never" name="never" title="Never" value={props.never} onChange={props.handleNever}/>
         <label htmlFor="never">Never</label>
       </div>
       {/* <div className="current-page">

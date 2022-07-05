@@ -14,6 +14,7 @@ const EnterName = (props) => {
         placeholder="John Doe"
         name="name"
         type="text"
+        title="Enter your name"
         onChange={props.handleChange}
       />
     </>
