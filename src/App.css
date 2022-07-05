@@ -1,0 +1,141 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+.App {
+  background-color: black;
+  height: 657px;
+  width: 100%;
+  position: absolute;
+}
+
+.box {
+  height: 90%;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+p {
+  font-size: 40px;
+}
+
+p {
+  font-size: 14px;
+  width: 50%;
+}
+
+h2,
+h4 {
+  margin-top: 1px;
+}
+
+.score-number {
+  font-size: 35px;
+  font-weight: bold;
+}
+.points {
+  font-size: 8px;
+}
+
+.next-btn, .start-btn, .restart-btn, .finish-btn {
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 8px;
+  width: 200px;
+  font-size: 12px;
+  background-color: white;
+}
+
+.previous-btn {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid transparent;
+  font-size: x-small;
+  margin-top: 30px;
+}
+
+
+/* Input elements */
+
+.name,
+select {
+  padding: 5px;
+  width: 25%;
+  background-color: black;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #6a6a6a;
+  color: #6a6a6a;
+  outline: none;
+}
+
+select {
+  border: 1px solid white;
+  color: white;
+}
+
+input[type="checkbox"] {
+  margin-left: 28px;
+}
+
+input[type="checkbox"]:nth-child(1) {
+  margin-left: 0px;
+}
+
+/* End of Input elements */
+
+progress {
+  top: 612px;
+  left: 640px;
+  width: 317px;
+  height: 43px;
+  background-color: black 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border: 1px solid white;
+  margin-top: 10px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: black;
+}
+progress::-webkit-progress-value {
+  background-image: linear-gradient(to right, white, white);
+}
+
+.current-page {
+  margin-top: 150px;
+  margin-left: auto;
+  width: 150px;
+  border: 1px solid yellow;
+
+}
+
+.page-number {
+  width: 150px;
+  font-size: 10px;
+}
+
+.name-display{
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: -150px;
+}
