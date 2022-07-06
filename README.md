@@ -1,6 +1,6 @@
 # Multi-step form
 
-This is a multi-step form that moves to the next page using pagination. Five buttons are reponsible for pagination:
+This is a multi-step form used for surveying website usage and location details. Five buttons are reponsible for pagination:
 
  - Start Survey : begins the survey and navigates from the default page.
  - Next : navigates to the next page starting from the second to the fifth page.
