@@ -16,3 +16,8 @@ This is a multi-step form that moves to the next page using pagination. Five but
  
  - Next page function
  - Previous page function
+
+# Tools
+ - React
+ - CSS
+ - Phosphoric icons
