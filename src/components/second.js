@@ -6,9 +6,9 @@ const Second = (props) => {
   }
   return (
     <>
-      <h6 className="name-display">SURVEY FOR: {props.name} </h6>
-      <h6 style={{ paddingTop: "140px" }}>QUESTION 2</h6>
-      <h2>Please select least one option</h2>
+      <h2 className="name-display">SURVEY FOR: {props.name} </h2>
+      <h3 style={{ paddingTop: "140px" }}>QUESTION 2</h3>
+      <h4>Please select at least one option</h4>
       <div className="checkboxes">
         <input
           type="checkbox"
@@ -38,9 +38,7 @@ const Second = (props) => {
         />
         <label htmlFor="option3">Option3</label>
       </div>
-      {/* <div className="current-page">
-        <p className="page-number">Question {props.currentPage - 2}/3</p>
-      </div> */}
+   <div>{props.pageNumber}</div>
     </>
   );
 };

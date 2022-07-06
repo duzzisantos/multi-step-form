@@ -8,6 +8,7 @@ html {
   }
 }
 
+/*Grandparent node*/
 .App {
   background-color: black;
   height: 657px;
@@ -15,6 +16,7 @@ html {
   position: absolute;
 }
 
+/*Parent node*/
 .box {
   height: 90%;
   width: 95%;
@@ -33,9 +35,10 @@ html {
   font-family: "Inter", sans-serif;
 }
 
-h1,
-p {
-  font-size: 40px;
+/*Headers and paragraph*/
+
+h1 {
+  font-size: 80px;
 }
 
 p {
@@ -43,18 +46,31 @@ p {
   width: 50%;
 }
 
-h2,
-h4 {
-  margin-top: 1px;
+h2{
+  font-size: 11px;
 }
 
-.score-number {
-  font-size: 35px;
+h3{
+  font-size: 10px;
+}
+h4 {
+  margin-top: 0px;
+  font-size: 48px;
   font-weight: bold;
 }
-.points {
-  font-size: 8px;
+
+.name-display, .name-display3{
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: -50px;
 }
+
+
+.name-display3{
+  margin-top: -100px;
+}
+
+/*Buttons for pagination*/
 
 .next-btn, .start-btn, .restart-btn, .finish-btn {
   font-weight: bold;
@@ -65,13 +81,16 @@ h4 {
   background-color: white;
 }
 
+.finish-btn{
+  margin-top: -60px;
+}
 .previous-btn {
   color: white;
   text-decoration: none;
   background-color: black;
   border: 1px solid transparent;
   font-size: x-small;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 
@@ -79,8 +98,9 @@ h4 {
 
 .name,
 select {
-  padding: 5px;
-  width: 25%;
+  height: 40px;
+  width: 641px;
+  font-size: 24px;
   background-color: black;
   border: 1px solid transparent;
   border-bottom: 1px solid #6a6a6a;
@@ -95,14 +115,20 @@ select {
 
 input[type="checkbox"] {
   margin-left: 28px;
+  height: 15px;
+  width: 15px;
 }
 
 input[type="checkbox"]:nth-child(1) {
   margin-left: 0px;
 }
 
-/* End of Input elements */
 
+/*Score board display*/
+
+.points {
+  font-size: 10px;
+}
 progress {
   top: 612px;
   left: 640px;
@@ -122,20 +148,47 @@ progress::-webkit-progress-value {
 }
 
 .current-page {
-  margin-top: 150px;
+  margin-top: 100px;
   margin-left: auto;
   width: 150px;
-  border: 1px solid yellow;
-
 }
 
 .page-number {
   width: 150px;
   font-size: 10px;
 }
+.your-score{
+  font-size: 48px;
+  margin-top: 10px;
+}
 
-.name-display{
-  margin-left: auto;
-  margin-right: 20px;
-  margin-top: -150px;
+.score-number {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: -40px;
+}
+
+
+/*Responsiveness for tablets && phones*/
+
+@media screen and (max-width: 768px){
+  h1{
+    font-size: 40px;
+  }
+  h3{
+    font-size: 10px;
+  }
+
+  h4, .your-score{
+    font-size: 24px;
+  }
+
+  .name, select{
+    width: 320px;
+    font-size: 15px;
+  }
+  .score-number{
+    margin-top: 5px;
+  }
+
 }

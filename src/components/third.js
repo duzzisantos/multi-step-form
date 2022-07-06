@@ -6,10 +6,15 @@ const Third = (props) => {
   }
   return (
     <>
-      <h6 className="name-display">SURVEY FOR: {props.name}</h6>
-      <h6 style={{ paddingTop: "140px" }}>QUESTION 3</h6>
-      <h2>Where are you from?</h2>
-      <select name="select" className="select" onChange={props.handleGermany} title="Germany">
+      <h2 className="name-display3">SURVEY FOR: {props.name}</h2>
+      <h3 style={{ marginTop: "30px" }}>QUESTION 3</h3>
+      <h4>Where are you from?</h4>
+      <select
+        name="select"
+        className="select"
+        onChange={props.handleGermany}
+        title="Germany"
+      >
         <option>Please choose your country?</option>
         <option value={props.germany}>Germany</option>
       </select>
@@ -26,9 +31,6 @@ const Third = (props) => {
         <option>Please choose your country?</option>
         <option value={props.spain}>Spain</option>
       </select>
-      {/* <div className="current-page">
-        <span className="page-number">Question {props.currentPage - 2}/3</span>
-      </div> */}
     </>
   );
 };

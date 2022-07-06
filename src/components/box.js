@@ -175,7 +175,12 @@ class Form extends React.Component {
     let currentPage = this.state.currentPage;
     if (currentPage === 1) {
       return (
-        <button type="reset" className="start-btn" onClick={this.nextPage} title="Start survey">
+        <button
+          type="reset"
+          className="start-btn"
+          onClick={this.nextPage}
+          title="Start survey"
+        >
           START THE SURVEY <ArrowCircleRight />
         </button>
       );
@@ -187,7 +192,12 @@ class Form extends React.Component {
     let currentPage = this.state.currentPage;
     if (currentPage >= 2 && currentPage <= 4) {
       return (
-        <button type="button" className="next-btn" onClick={this.nextPage} title="Next page">
+        <button
+          type="button"
+          className="next-btn"
+          onClick={this.nextPage}
+          title="Next page"
+        >
           NEXT <ArrowCircleRight />
         </button>
       );
@@ -199,9 +209,16 @@ class Form extends React.Component {
     let currentPage = this.state.currentPage;
     if (currentPage === 5) {
       return (
-        <button type="button" className="finish-btn" onClick={this.nextPage} title="Finish">
-          FINISH <ArrowCircleRight />
-        </button>
+        <>
+          <button
+            type="button"
+            className="finish-btn"
+            onClick={this.nextPage}
+            title="Finish"
+          >
+            FINISH <ArrowCircleRight />
+          </button>
+        </>
       );
     }
     return null;
@@ -252,7 +269,7 @@ class Form extends React.Component {
         />
         <First
           currentPage={this.state.currentPage}
-          // name={this.state.name}
+          name={this.state.name}
           often={this.state.often}
           rarely={this.state.rarely}
           never={this.state.never}

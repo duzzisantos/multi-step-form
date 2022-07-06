@@ -6,8 +6,8 @@ const EnterName = (props) => {
   }
   return (
     <>
-      <h6>WHO ARE YOU?</h6>
-      <h2>Please enter your name.</h2>
+      <h3>WHO ARE YOU?</h3>
+      <h4>Please enter your name.</h4>
       <input
         className="name"
         value={props.name}

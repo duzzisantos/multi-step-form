@@ -7,20 +7,19 @@ const Score = (props) => {
     props.often +
     props.rarely +
     props.option1 +
-    props.option1 +
     props.option2 +
-    props.option2 + props.germany + props.sweden + props.italy + props.spain
+    props.option3 + props.germany + props.sweden + props.italy + props.spain
 
   if (props.currentPage !== 6) {
     return null;
   }
   return (
     <>
-      <h6>RESULT</h6>
-      <h2>Your Score</h2>
+      <h2>RESULT</h2>
+      <h3 className="your-score">Your Score</h3>
       <h4>{props.name}</h4>
       <span className="score-number">{totalScore / 0.16}</span>
-      <span className="points">POINTS</span>
+      <span className="points">Points</span>
       <progress
         className="progress"
         max="100"
