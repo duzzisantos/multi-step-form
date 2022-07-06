@@ -27,7 +27,9 @@ class Form extends React.Component {
 
       value: 0,
     };
-
+    
+    //Event listeners
+    
     this.handleChange = this.handleChange.bind(this);
     this.handleRarely = this.handleRarely.bind(this);
     this.handleOften = this.handleOften.bind(this);
